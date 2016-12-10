@@ -1,0 +1,32 @@
+﻿Header {
+    background-color: red;
+    width: 100%;
+}
+
+Footer {
+    background-color: aqua;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+aside, article {
+    float: left;
+    margin: 0;
+}
+
+article {
+    background-color: black;
+    width: 80%;
+}
+
+.left-panel {
+    background-color: green;
+    width: 10%;
+}
+
+.right-panel {
+    background-color: yellow;
+    width: 10%;
+}
