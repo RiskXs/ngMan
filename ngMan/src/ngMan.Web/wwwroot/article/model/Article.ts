@@ -1,5 +1,6 @@
-﻿class Article
-{
-    title: string;
-    content: string;
+﻿module ngMan.article.Model {
+    export class Article {
+        public title: string;
+        public content: string;
+    }
 }
