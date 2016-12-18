@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +13,8 @@ namespace ngMan.API
 {
     public class Startup
     {
+        private const string ALLOW_CROSS_ORIGIN_POLICY = "AllowCrossOrigin";
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -36,8 +39,17 @@ namespace ngMan.API
         {
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
-
             services.AddMvc();
+            services.AddCors(options =>
+            {
+                var policy = new CorsPolicy();
+                policy.Headers.Add("*");
+                policy.Methods.Add("*");
+                policy.Origins.Add("*");
+                policy.SupportsCredentials = true;
+
+                options.AddPolicy(ALLOW_CROSS_ORIGIN_POLICY, policy);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
@@ -49,6 +61,8 @@ namespace ngMan.API
             app.UseApplicationInsightsRequestTelemetry();
 
             app.UseApplicationInsightsExceptionTelemetry();
+
+            app.UseCors(ALLOW_CROSS_ORIGIN_POLICY);
 
             app.UseMvc();
         }

@@ -5,11 +5,15 @@
     import Article = ngMan.article.Model.Article;
     class ArticleController {
         public article: Article;
-
-        constructor() {
+        static $inject =["articleService"];
+        constructor(private articleService:ngMan.article.Services.ArticleService) {
             this.article = new Article();
             this.article.title = "My Title";
             this.article.content = "My Content";
+        }
+
+        public getArticle() {
+            this.articleService.getArticle();
         }
     }
 
