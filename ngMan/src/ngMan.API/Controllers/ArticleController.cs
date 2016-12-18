@@ -16,7 +16,12 @@ namespace ngMan.API.Controllers
             return new Article
             {
                 Title = "My Firt Article",
-                Content = "This is my firt blog article!"
+                Content = "This is my firt blog article!",
+                Intro = "This will be the first paragraph of many," +
+                        "This will be the first paragraph of many," +
+                        "This will be the first paragraph of many," +
+                        "This will be the first paragraph of many",
+                Date = 12345678
             };
         }
     }

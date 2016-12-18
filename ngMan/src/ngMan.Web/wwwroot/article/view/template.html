@@ -1,3 +1,6 @@
-﻿<div>
-    {{vm.article.title}}
+﻿<div class="article-component">
+    <h1 class="title" ng-bind="vm.article.title"></h1>
+    <div class="date" ng-bind="vm.article.date"></div>
+    <p class="intro" ng-bind="vm.article.intro"></p>
+    <article class="content" ng-bind="vm.article.content"></article>
 </div>

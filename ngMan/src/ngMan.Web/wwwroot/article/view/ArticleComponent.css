@@ -1,0 +1,29 @@
+﻿.article-component {
+    width: 900px;
+    max-height: 700px;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.title {
+    max-width: 40%;
+    margin: 0;
+}
+
+.date {
+    margin-top: 5px;
+    font-style: italic;
+    font-weight: bold;
+    color: #d3d3d3;
+    font-size: 14px;
+}
+
+.intro {
+    max-width: 70%;
+    font-weight: bold;
+}
+.content {
+    max-width: 70%;
+}

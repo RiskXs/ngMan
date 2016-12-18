@@ -13,7 +13,9 @@
         }
 
         public getArticle() {
-            this.articleService.getArticle();
+            this.articleService.getArticle().then(promiseValue => {
+                this.article = promiseValue.data;
+            });
         }
     }
 

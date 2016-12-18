@@ -7,11 +7,8 @@ module ngMan.article.Services {
             
         }
 
-        public getArticle(): void {
-            this.$http.get("http://localhost:54132/api/article/1")
-                .then(data => {
-                    console.log(data.data);
-                });
+        public getArticle(): ng.IHttpPromise<ngMan.article.Model.Article> {
+            return this.$http.get("http://localhost:54132/api/article/1");
         }
     }
 

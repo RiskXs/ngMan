@@ -26,10 +26,7 @@ var ngMan;
                     this.$http = $http;
                 }
                 ArticleService.prototype.getArticle = function () {
-                    this.$http.get("http://localhost:54132/api/article/1")
-                        .then(function (data) {
-                        console.log(data.data);
-                    });
+                    return this.$http.get("http://localhost:54132/api/article/1");
                 };
                 return ArticleService;
             }());
@@ -79,7 +76,10 @@ var ngMan;
                     this.article.content = "My Content";
                 }
                 ArticleController.prototype.getArticle = function () {
-                    this.articleService.getArticle();
+                    var _this = this;
+                    this.articleService.getArticle().then(function (promiseValue) {
+                        _this.article = promiseValue.data;
+                    });
                 };
                 return ArticleController;
             }());
