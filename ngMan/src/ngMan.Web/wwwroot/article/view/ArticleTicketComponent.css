@@ -1,0 +1,18 @@
+﻿.date-section {
+    width: 50px;
+    text-align: center;
+    /*Background color to choose from:
+        cornflowerblue
+        dodgerblue
+        lightblue
+        lightskyblue
+        mediumslateblue
+    */
+    background-color: mediumslateblue;
+    color: white;
+}
+
+.month {
+    font-size: 35px;
+    display: block;
+}

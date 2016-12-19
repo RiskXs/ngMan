@@ -45,7 +45,7 @@ var ngMan;
         (function (View) {
             var ArticleComponent = (function () {
                 function ArticleComponent() {
-                    this.templateUrl = "article/view/template.html";
+                    this.templateUrl = "article/view/ArticleComponent.tmpl.html";
                     this.bindings = {
                         article: '='
                     };
@@ -85,6 +85,28 @@ var ngMan;
             }());
             ArticleController.$inject = ["articleService"];
             angular.module("article").controller("articleController", ArticleController);
+        })(View = article.View || (article.View = {}));
+    })(article = ngMan.article || (ngMan.article = {}));
+})(ngMan || (ngMan = {}));
+var ngMan;
+(function (ngMan) {
+    var article;
+    (function (article) {
+        var View;
+        (function (View) {
+            var ArticleTicketComponent = (function () {
+                function ArticleTicketComponent() {
+                    this.templateUrl = "article/view/ArticleTicket.tmpl.html";
+                    this.bindings = {
+                        article: '='
+                    };
+                    this.controller = function () {
+                    };
+                    this.controllerAs = "vm";
+                }
+                return ArticleTicketComponent;
+            }());
+            angular.module("article").component("articleTicket", new ArticleTicketComponent());
         })(View = article.View || (article.View = {}));
     })(article = ngMan.article || (ngMan.article = {}));
 })(ngMan || (ngMan = {}));

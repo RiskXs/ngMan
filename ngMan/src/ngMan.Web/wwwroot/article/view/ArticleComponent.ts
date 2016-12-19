@@ -6,7 +6,7 @@ module ngMan.article.View {
         public controller: any;
         public controllerAs: string;
         constructor() {
-            this.templateUrl = "article/view/template.html";
+            this.templateUrl = "article/view/ArticleComponent.tmpl.html";
             this.bindings = {
                 article:'='
             }
