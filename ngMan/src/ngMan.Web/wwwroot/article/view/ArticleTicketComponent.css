@@ -1,5 +1,6 @@
 ﻿.date-section {
     width: 50px;
+    height: 90px;
     text-align: center;
     /*Background color to choose from:
         cornflowerblue
@@ -10,9 +11,22 @@
     */
     background-color: mediumslateblue;
     color: white;
+    font-size: 30px;
+    display: inline-block;
+
 }
 
+h4 {
+    margin: 0;
+}
 .month {
     font-size: 35px;
     display: block;
+}
+
+.article-section {
+    width: 300px;
+    height: 90px;
+    background-color: lightskyblue;
+    display: inline-block;
 }
