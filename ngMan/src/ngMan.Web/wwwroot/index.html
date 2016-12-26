@@ -3,14 +3,30 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="thirdParty/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="article/view/ArticleComponent.css" rel="stylesheet" />
     <link href="article/view/ArticleTicketComponent.css" rel="stylesheet" />
+    <script src="thirdParty/jquery/jquery-3.1.1.min.js"></script>
+    <script src="thirdParty/bootstrap/js/bootstrap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
     <script src="app.js"></script>
 </head>
 <body ng-controller="articleController as vm">
-<button ng-click="vm.getArticle()">push the button</button>
-<!--<app-article article="vm.article"></app-article>-->
-<article-ticket article="vm.article"></article-ticket>
+    <header>
+        logo
+    </header>
+    <div class="container">
+        <div class="row">
+            <aside class="col-sm-2 side-menu">
+                <div ng-click="vm.getArticle()">Home</div>
+            </aside>
+            <section class="col-sm-2"><article-ticket article="vm.article"></article-ticket></section>
+        </div>
+    </div>
 </body>
+<!--<body ng-controller="articleController as vm">
+<button ng-click="vm.getArticle()">push the button</button>
+<!--<app-article article="vm.article"></app-article>
+<article-ticket article="vm.article"></article-ticket>
+</body>-->
 </html>
